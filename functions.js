@@ -143,6 +143,12 @@ function channelWithMostContent(channels) {
     if (totalVideosDuration(ch) > totalVideosDuration(channel)) channel = ch;
   });
   return channel;
+
+  // Alternative Solution:
+  // let channel = channels.sort(function(a, b) {
+  //   return totalVideosDuration(a) + totalVideosDuration(b);
+  // });
+  // return channel[0];
 }
 
 /**************************************************************
@@ -159,6 +165,12 @@ function longestChannelName(channels) {
       channelWithLongestName = channel;
   });
   return channelWithLongestName;
+
+  // Alternative Solution:
+  // let channelWithLongestName = channels.sort(
+  //   (a, b) => b.name.length - a.name.length
+  // );
+  // return channelWithLongestName[0];
 }
 
 module.exports = {
