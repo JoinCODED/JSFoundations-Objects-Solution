@@ -86,11 +86,7 @@ function getChannelByVideoTitle(videoTitle, channels) {
   return channelFound;
 
   // Alternative Solution:
-  // return channels.find((channel) =>
-  //   channel.videos.some(
-  //     (video) => video.title.toLowerCase() === videoTitle.toLowerCase()
-  //   )
-  // );
+  // return channels.find((channel) => channelHasVideoTitle(videoTitle, channel));
 }
 
 /**************************************************************
